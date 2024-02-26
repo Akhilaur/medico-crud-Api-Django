@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Medicine-list</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<style>
+    img{ 
+            float: right; margin-top: 180px; opacity: 70%;
+            
+        }
+       .container{
+        float: left; margin-left: 300px; margin-top: 100px; ;
+       }
+        
+</style>
+<body>
+
+<div class="container" >
+<h2>Search Results : </h2><br>			
+<table>
+
+    
+    <table class="table table-bordered table-hover">
+        <thead class="bg-dark text-light">
+            <tr>
+                <th>Medicine-name</th>
+                <th>Company Name</th>
+                <th>Expiry Date</th>
+                <th>Amount</th>
+                
+            </tr>
+        </thead>
+
+    {% for x in medicine %}
+    <tr>
+        <td>{{ x.medicine_name }}</td>
+        <td>{{ x.company_name }}</td>
+        <td>{{x.date}}</td>
+        <td>{{ x.amount }}</td>
+
+     
+    </tr>
+    {% empty %}
+    <tr>
+        <td>No medicine found</td>
+    </tr>
+	{% endfor %}
+	
+</tbody>
+</table>
+</div>
+ <img src="https://cdn2.iconfinder.com/data/icons/bacteria/512/bacteria_5-512.png" width="200px" height="200px">
+</body>
+</html>
+

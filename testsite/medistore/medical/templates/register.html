@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+        img{
+            float: right; margin-top: 300px;
+            
+        }
+        .container{
+            width: 400px; margin-top: 100px; margin-left: 120px; float: left;
+
+        }
+    </style>
+</head>
+<body>
+    
+    <form action="register" method="post">
+        {% csrf_token %}
+    
+    <div class="container">
+        <h1>Sign Up Form</h1>
+        <div>
+            <input type="firstname" name="first_name" class="form-control" placeholder="First Name">
+        </div><br>
+        <div>
+        <input type="text" class="form-control" name="last_name" placeholder="Last Name">
+    </div><br>
+        <div>
+        <input type="text" class="form-control" name="username" placeholder="Username">
+    </div><br>
+        <div>
+        <input type="email" class="form-control" name="email" placeholder="Email">
+    </div><br>
+        <div>
+        <input type="password" class="form-control" name="password1" placeholder="Password">
+    </div><br>
+        <div>
+        <input type="password" class="form-control" name="password2" placeholder="Confirm Password">
+    </div><br>
+        
+    <button class="btn btn-primary btn-block" type="submit">Sign Up</button>
+    </div>
+
+    </form>
+     <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/6817e091809003.5e3b280fdb566.jpg" width="600" height="400">
+    <div>
+        {% for message in messages%}
+          <h4> {{message}} </h4>
+         
+        {% endfor %}
+    </div>
+    
+</body>
+</html>
+

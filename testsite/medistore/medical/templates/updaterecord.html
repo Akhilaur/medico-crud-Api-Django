@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+  
+</head>
+
+<body>
+
+    <form action="/update/{{medicine.mname}}" method="POST">
+        {% csrf_token %}
+    <div>
+    Medicine Name:<br>
+        <input type="text" name="medicine_name" class="form-control" value="{{upd.medicine_name}}">
+    </div>
+        <br>
+    <div>
+    Company Name:<br>
+        <input type="text" name="company_name" class="form-control" value="{{upd.company_name}}">
+    </div>
+        <br>
+    
+    <div>
+    Amount :<br>
+        <input type="number" name="amount" class="form-control" value="{{upd.amount}}">
+    </div>
+        <br>
+     
+    <button class="btn btn-primary btn-block" type="submit">Submit</button>             
+            <a href="{% url 'home' %}" >Show details</a>
+    
+    </form>
+   
+   
+</body>
+</html>

@@ -1,0 +1,52 @@
+        
+         <title>Medicine-list</title>
+        
+		 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+         <style>
+			h4{color: black; font-size: 200%;}
+            img{float: right; margin-top: -90px;}
+			ul{width: 30%; color: black; text-align: center; font-size: 150%; margin-left: 450px ; margin-top: 150px;}
+			a{color: black;}
+			div{background-color: skyblue;}
+			a{text-decoration: none; }
+			.sample{
+				text-align: center; font-family: Papyrus; 
+			}
+			button{
+				float: right; padding: 2px;width: 100px;margin-right: 100px; color: black;
+			}
+		 </style>
+			
+			
+		<div class="sample"	>
+			{% if user.is_authenticated %}
+			<h4 style="color: white;">Hello , {{user.first_name}}</h4>
+			
+			
+		</div>
+		
+		<button onclick="location.href='logout';">
+			Logout
+		</button>
+		  <h3>{{now}}</h3>
+                
+			<ul class="list-group ">
+				<div class= " p-3 mb-5 bg-sky blue">
+			<li class="list-group-item"><a href="addrecord">Add new medicine</a> </li>
+		</div>
+		<div class=" p-3 mb-5 bg-sky blue">
+			<li class="list-group-item"><a href="list">medicine list</a><br></li></div>
+
+		   </ul>	
+		   
+		   {% else %}
+			
+			
+			{% endif %}
+		
+           <img src="https://static.vecteezy.com/system/resources/previews/000/386/314/non_2x/vector-doctors-and-health-illustration.jpg" width="500px" height="325px">
+
+		

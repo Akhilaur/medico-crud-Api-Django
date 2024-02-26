@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <style>
+    div{float: left; margin-top: 150px; margin-left: 110px;
+    }
+    a{
+        color: black;  font-size: 200%; text-decoration: none; 
+    }
+ 
+   img{
+            float: right;  opacity: 70%;
+            
+        }
+     .container{ margin-top: 10px; margin-left: 150px; 
+
+        }
+       
+  </style>  
+</head>
+<body>
+  
+  
+    
+    
+    <div>
+    <h1 style="text-align: center; margin: auto; color:rgb(5, 75, 113); font-size:500%;text-shadow: 2px 2px 4px" > Medical store </h1><br><br>
+    
+  
+   <div class="container">
+    <a  href="{% url 'register' %}" > Signup </a><br><br>
+    <a href="{% url 'login' %}"> Login </a>
+    
+    </div>
+    </div>
+    
+     
+
+<img src="http://pngimg.com/uploads/doctor/doctor_PNG15962.png"width="910px" height="720px">
+</body>
+</html>

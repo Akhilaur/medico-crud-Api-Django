@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        img{
+             margin-top: 300px; float: right;
+            
+        }
+        .container{
+            width: 400px; margin-top: 100px; margin-left: 120px; float: left;
+
+        }
+    </style>
+    </head>
+<body>
+    <div class="container">
+    <h1>Update medicine</h1>
+
+    <form action="{% url 'updaterecord' upd.id %}" method="post">
+    {% csrf_token %}
+    <div>
+    Medicine Name:<br>
+        <input type="text" name="medicine_name" class="form-control" value="{{upd.medicine_name}}">
+        </div><br>
+    <div>
+    Company Name:<br>
+        <input type="text" name="company_name" class="form-control" value="{{upd.company_name}}">
+      </div> <br>
+    <div>
+    Amount :<br>
+        <input type="number" name="amount" class="form-control" value="{{upd.amount}}">
+     </div><br>
+    
+        <button class="btn btn-primary btn-block" type="submit">Submit</button>
+    </form>
+    </div>
+    <img src="https://i.pinimg.com/originals/ce/35/14/ce351420c5b09a45b3173dc222e76b84.png" width="500px" height="400px">
+    
+</body>
+</html>
